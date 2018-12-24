@@ -46,3 +46,6 @@ Write-BoxstarterMessage "winrm setup complete"
 
 Write-BoxstarterMessage "Installing .NET Framework 3.5"
 Install-WindowsFeature Net-Framework-Core
+
+Write-BoxstarterMessage "Disabling UAC"
+Disable-UAC

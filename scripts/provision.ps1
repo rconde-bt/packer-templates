@@ -75,6 +75,10 @@ copy-item a:\SetupComplete-2012.cmd C:\Windows\setup\scripts\SetupComplete.cmd -
 mkdir C:\Windows\Panther\Unattend
 copy-item a:\postunattend.xml C:\Windows\Panther\Unattend\unattend.xml
 
+Write-Host "disabling LUA"
+Set-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -Name EnableLUA  -Value 0
+
+
 Write-Host "Recreate pagefile after sysprep"
 $System = GWMI Win32_ComputerSystem -EnableAllPrivileges
 if ($system -ne $null) {

@@ -8,3 +8,4 @@ output-qemu
 vendor
 Vagrantfile
 .vagrant/
+packer_cache

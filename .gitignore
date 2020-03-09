@@ -9,3 +9,4 @@ vendor
 Vagrantfile
 .vagrant/
 packer_cache
+Berksfile.lock
